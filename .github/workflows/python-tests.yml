@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Checkout code
       run: |
-        git clone https://github.com/${{ https://github.com/bedashto/Phishing-Detection-Tool-With-ML }} repo
+        git clone https://github.com/${{ github.com/bedashto/Phishing-Detection-Tool-With-ML }} repo
         cd repo
 
     - name: Use system Python
