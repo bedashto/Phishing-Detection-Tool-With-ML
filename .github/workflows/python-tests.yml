@@ -11,20 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      run: |
-        git clone https://github.com/${{ github.com/bedashto/Phishing-Detection-Tool-With-ML }} repo
-        cd repo
+      uses: actions/checkout@v3
 
     - name: Use system Python
       run: python --version
 
     - name: Install dependencies
       run: |
-        cd repo
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run tests
-      run: |
-        cd repo
-        python -m unittest discover -s . -p "test_*.py"
+      run: python -m unittest discover -s . -p "test_*.py"
